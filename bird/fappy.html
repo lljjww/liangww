@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="reset.css" />
+        <link rel="stylesheet" type="text/css" href="clear.css" />
+        <style type="text/css">
+            #bg{
+                width: 343px;
+                height: 480px;
+                margin:auto;
+                background: url(img/bg.jpg);
+                position:relative;
+                overflow: hidden;
+            }
+            #banner{
+                width: 343px;
+                height: 14px;
+                background:url(img/banner.jpg);
+                position: absolute;
+                bottom: 43px;
+                overflow:hidden;
+            }
+            #banner-in{
+                width: 686px;
+                height: 14px;
+            } 
+            #ccc{
+                width: 150px;
+                height: 131px;
+                background:url(img/ccc.JPG) no-repeat;
+                background-size:150px;    
+                position: absolute;
+                top: 184px;
+                left: 93px;
+            }
+            #bird{
+                width: 40px;
+                height: 30px;
+                background-image:url(img/bird0.png);
+                background-repeat:no-repeat;
+                position: absolute;
+                top: 226px;
+                left: 70px;
+
+            }
+            #head{
+                width: 236px;
+                height: 77px;
+                position:absolute;
+                background:url(img/head.jpg);
+                top: 40px;
+                left: 80px;
+            }
+            #top{
+                width: 62px;
+                height: 120px;
+                position: absolute;
+                background:url(img/up_mod.png);
+                top: 0;
+            }
+            #bottom{
+                width: 62px;
+                height: 120px;
+                position: absolute;
+                bottom:57px;
+                background:url(img/down_mod.png);
+            }
+            #tophead{
+                width: 62px;
+                height: 60px;
+                position: absolute;
+                bottom:0px;
+                background:url(img/up_pipe.png);
+            }
+            #downhead{
+                width: 62px;
+                height: 60px;
+                position: absolute;
+                top:0px;
+                background:url(img/down_pipe.png);
+            }
+            #fen{
+                width: 28px;
+                height: 39px;
+                background:url(img/0.jpg);
+                position: absolute;
+                top: 30px;
+                left: 160px;
+                display:none;
+            }
+            #fen2{
+                width: 28px;
+                height: 39px;
+                background:url(img/0.jpg);
+                position: absolute;
+                top: 30px;
+                left: 100px;
+                /*display:none;*/
+            }
+        </style>
+    </head>
+    <body>
+        <div id="bg" class="clear">
+            <div id="head"></div>
+            <div id="banner">
+                <div id="banner-in">
+                   <!--  <img src="img/banner.jpg" height="14" width="343" alt="" /><img src="img/banner.jpg" height="14" width="343" alt="" /> -->
+                </div>
+            </div>
+            <div id="ccc"></div>
+            <div id="fen"></div>
+            <!-- <div id="fen2"></div> -->
+            <div id="bird"></div>
+            <!-- <div id="top">
+                <div id="tophead"></div>
+            </div>
+            <div id="bottom">
+                <div id="downhead"></div>
+            </div> -->
+        </div>
+    </body>
+    <script type="text/javascript" src="tween.js"></script>
+    <script type="text/javascript">
+    var oBg = document.getElementById('bg');
+    var oHead = document.getElementById('head');
+    var banner = document.getElementById('banner');
+    var ccc = document.getElementById('ccc');
+    var bannerIn = document.getElementById('banner-in');
+    var oBird = document.getElementById('bird');
+    var fen = document.getElementById('fen');
+    var fen2 = document.getElementById('fen2');
+    var a = 276;
+    var a = 276;
+    var c = 0;
+    var num = 0;
+    var who = 0 ;
+    var i = 0;
+    var time3;
+    var skyy = true;
+    var divs = [];
+    var div2s = [];
+    var lefts = [];
+    var heights = [];
+    var left2s = [];
+    var height2s = [];
+    var f = 160;
+    var m = 100;
+    var d = oBird.offsetLeft;
+
+    //点击开始
+    oBg.addEventListener('click',function(e){
+        var e = e || window.event;
+        // e.cancelBubble=true;
+        if(e.target == ccc){
+            ccc.style.display = 'none';
+            oHead.style.display = 'none';   
+            clearInterval(oBird.time);
+            fen.style.display = 'block';
+            // fen2.style.display = 'block';
+            downtime();
+            create(0,7);
+            stare();
+        }
+    } , false)
+
+    //柱子动
+    function stare(){
+        var time7 = setInterval(function(){
+            oBg.scrollLeft++;
+            d++;
+            f++;
+            m++;
+            oBird.style.left = d + 'px';
+            fen.style.left = f + 'px';
+            // fen2.style.left = m + 'px';
+            var R1 = oBird.offsetLeft+oBird.offsetWidth;
+            var T1 = oBird.offsetTop;
+            var B1 = T1 + oBird.offsetHeight;
+            var L1 = oBird.offsetLeft;
+            for (var i = 0; i < lefts.length; i++) {
+                if (R1>lefts[i]&&T1<heights[i]&&L1<lefts[i]){
+                    alert('结束')
+                    window.location.reload();
+                };
+                if (R1>left2s[i]&&B1>423-height2s[i]&&L1<left2s[i]+62){
+                    alert('结束')
+                     window.location.reload();
+                };
+            }
+            if((d-410)%150==0){
+                 who = (d-410)/150+2;  
+        
+                    fen.style.background = "url(img/"+who+".jpg)";
+
+            }
+        },10)
+    }
+
+
+    
+
+    oBg.onscroll = function(){
+        var scrollLeft = oBg.scrollLeft;
+        var clientWidth = oBg.clientWidth;
+        if(scrollLeft+clientWidth>=divs[divs.length-1].offsetLeft+62){
+            var num = divs.length;
+                create(num,num+7);
+        }
+    }
+
+    //闪烁
+    function sky(){
+        var time4 =setInterval(function(){
+                if(skyy==true){
+                    who = 0;
+                    skyy = false;
+                }
+                else{
+                    who = 1;
+                    skyy= true
+                }
+
+        }, 100)
+    }
+
+    //背景滚动条
+    banner.time = setInterval(function(){
+        banner.scrollLeft ++;
+        if(banner.scrollLeft==bannerIn.offsetWidth/2){
+            banner.scrollLeft = 0;
+        }
+    },10)
+
+
+    function downtime(){
+        time2 = setInterval(down, 10);
+    }
+
+    //小鸟来回飞
+    oBird.time = setInterval(function up(){
+        var num = Math.sin(i*Math.PI/180)*50+226;
+        oBird.style.top = num + 'px';
+        i++; 
+    }, 20); 
+
+    
+    // 小鸟往下掉
+    function down(){
+                var maxT = banner.offsetTop-oBird.offsetHeight;
+                sky();
+                 oBird.style.background = "url(img/down_bird"+who+".png)";
+                a++;
+                
+                if(oBird.offsetTop == maxT){
+                    a = maxT;
+                    dow=false;
+                    oBird.style.transform = "rotate(90deg)";
+                    oBird.style.height = 26 + 'px';
+                    clearInterval(banner.time);
+                    clearInterval(time7);
+                }
+                oBird.style.top = a + 'px';
+    }
+
+    //小鸟往上
+    document.onclick = function(){
+                if(time2){
+                    clearInterval(time2);
+                    time2 = null;
+                }
+                sky();
+                oBird.style.background = "url(img/up_bird"+who+".png)";
+                var step = 0;
+                var maxstep = 20;
+                var stare = oBird.offsetTop;
+                var end = oBird.offsetTop - 80;
+                var change = end-stare;
+                a =Tween.Quad.easeOut(step,stare,change,maxstep);
+
+                var time3 = setInterval(function(){
+                step++;
+                
+                a =Tween.Quad.easeOut(step,stare,change,maxstep);
+                oBird.style.top = a + 'px';
+                if (step >= maxstep){
+                    if(time3){
+                        clearInterval(time3);
+                    }
+                    downtime();
+                }
+            }, 10)
+    }
+
+
+    //生成柱子
+    function create(n1,n2){
+        for(var i=n1;i<n2;i++){
+            var oDiv = document.createElement('div');
+            oDiv.id = 'top';
+            oDiv.innerHTML = "<div id='tophead'></div>";
+
+            var oDiv2 = document.createElement('div');
+            oDiv2.id = 'bottom';
+            oDiv2.innerHTML = "<div id='downhead'></div>";
+
+            divs[i] = oDiv;
+            div2s[i] = oDiv2;
+
+            var num = Math.random()*100+100;
+            var num2 = Math.random()*100+100;
+
+            oDiv.style.height = num + 'px';
+            oDiv2.style.height = num2 + 'px';
+
+            heights[i] = num;
+            height2s[i] = num2;
+
+            oDiv.style.left = i*(150)+300 + 'px';
+            oDiv2.style.left = i*(150)+300 + 'px';
+
+            lefts[i] = i*(150)+300;
+            left2s[i] = i*(150)+300;
+            // console.log(lefts);
+
+            oBg.insertBefore(oDiv,fen);
+            oBg.insertBefore(oDiv2,fen);
+
+        }
+    }
+
+    </script>
+</html>
