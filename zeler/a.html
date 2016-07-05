@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/clear.css" />
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <!-- <script src="js/style.js"></script> -->
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="head">
+                <div id="head-left" class="fl">
+                    <span>ZEALER</span><span>首页</span><span>视频</span><span>手机</span><span>社区</span><span>维护</span><span>实验室</span><span>联系我们</span><span>下载APP</span>
+                </div>
+                <div id="head-right" class="fr">
+                    <a href="###">登录</a><a href="###">注册</a>
+                </div>
+            </div>
+            <div id="suv">
+                <div id="suv-con">
+                    <div id="main">
+                        <img src="img/a.jpg" alt="" />
+                        <img src="img/b.jpg" alt="" />
+                        <img src="img/c.jpg" alt="" />
+                        <img src="img/d.jpg" alt="" />
+                        <img src="img/e.jpg" alt="" />
+                        <img src="img/f.jpg" alt="" />
+                        <img src="img/a.jpg" alt="" />
+                    </div>
+                </div>  
+                <div id="suv-left"><</div>
+                <div id="suv-right">></div>
+                <div id="suv-btm" class="clear">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div id="con">
+                <div id="con-top" class="clear">
+                    <div id="chuping" class="fl">ZEALER 出品</div>
+                    <div id="wenzi" class="fl">
+                    <a href="###">硬件测评</a>
+                    <a href="###">搞机教程</a>
+                    <a href="###">脱口秀</a>
+                    <a href="###">人物专访</a>
+                    <a href="###">官方拆解</a>
+                    <a href="###">FiX小知识</a>
+                    <a href="###">ZEALER那些事</a>
+                    <a href="###">全部</a>
+                    </div>
+                </div>
+                <div id="con-but" class="clear">
+                    <div id="con-but-1">
+                        <img src="img/a1.jpg" alt="" />
+                        <div>总是丢三落四？试试智能防丢器</div>
+                        <img src="img/a2.jpg" alt="" />
+                        <div>续航几个月的Kindle Oasis能让...</div>
+                    </div>
+                    <div id="con-but-2">
+                        <img src="img/3a.jpg" alt="" />
+                        <div>键帽染色，让你的机械盘更出色</div>
+                        <img src="img/4a.jpg" alt="" />
+                        <div>做饭高手——什么是IH电饭煲</div>
+                    </div>
+                    <div id="con-but-3">
+                        <img src="img/5a.jpg" alt="" />
+                        <div>三星 Galaxy S7 edga | S7 测评</div>
+                        <img src="img/6a.jpg" alt="" />
+                        <div>带你分钟看完 魅族 PRO 6 发...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script type="text/javascript">
+    var suv = document.getElementById('suv');
+    var suvCon = document.getElementById('suv-con');
+    var main = document.getElementById('main');
+    var mains = main.getElementsByTagName('img')
+    var suvLeft = document.getElementById('suv-left');
+    var suvRight = document.getElementById('suv-right');
+    var suvBtm = document.getElementById('suv-btm');
+    var suvBtms = suvBtm.getElementsByTagName('div');
+    var time;
+    var num=0;
+    
+    time = setInterval(clock,2000);
+    function clock(){
+        num++;
+        console.log(num);
+        if(num==mains.length){
+            num=1;
+            suvCon.scrollLeft=0;
+        }
+        btmcolor();
+        moveTo(suvCon.scrollLeft,1287*num);
+    }
+    function moveTo(starepos,endpos){
+        var step=0;
+        var starepos=starepos;
+        var endpos=endpos;
+        var maxstep=15;
+        var everystep=(endpos-starepos)/maxstep;
+
+        function move(){
+            step++;
+            suvCon.scrollLeft += everystep;
+            if(step==maxstep){
+                clearInterval(time2);
+                suvCon.scrollLeft=endpos;
+            }
+        }
+        var time2 = setInterval(move,20);
+    }
+
+    function btmcolor(){
+        for(var i=0;i<suvBtms.length;i++){
+            suvBtms[i].style.backgroundColor = 'white';
+        }
+        var pop=num;
+        if(pop==6){
+            pop=0;
+        }
+        suvBtms[pop].style.backgroundColor = 'red';
+    }
+
+    for(var i=0;i<suvBtms.length;i++){
+        suvBtms[i].onclick = function(){
+            for(var j=0;j<suvBtms.length;j++){
+                if(this==suvBtms[j]){
+                    num=j-1;
+                    clearInterval(time);
+                    clock();
+                    time = setInterval(clock,2000);
+                }
+            }
+        }
+    }
+
+    suvLeft.onclick = function(){
+        clearInterval(time);
+        num -=2;
+        if(num==-2){
+            num=4;
+        }
+        clock();
+        time = setInterval(clock,2000);
+    }
+    suvRight.onclick = function(){
+        clearInterval(time);
+        clock();
+        time = setInterval(clock,2000);
+    }
+    </script>
+</html>
