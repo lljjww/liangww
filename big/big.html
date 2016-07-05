@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            body,html{
+                background:yellow;
+                padding: 0;
+                margin: 0;
+            }
+            #wrap{
+                width: 405px;
+                height: 200px;
+                overflow:hidden;
+                background-size: 100%;
+                float: left;
+                position:relative;
+                margin-right: 50px;
+            }
+            #wrap img{
+                width: 405px;
+                height: 200px;
+                display: none;
+                position:absolute;
+            }
+            #wrap img:nth-child(1){
+                display:block;
+            }
+
+            #btm{
+                /*width: 405px;*/
+                /*height: 94px;*/
+                /*background:red;*/
+                position: absolute;
+                top: 200px;
+                overflow:hidden;
+            }
+            #btm img{
+                width: 135px;
+                float: left;
+            }
+            #btm img:nth-child(2){
+                width: 135px;
+                height: 93px;
+            }
+            #btm img:nth-child(1){
+                width: 135px;
+                height: 93px;
+            }
+
+            #main{
+                width: 100px;
+                height: 100px;
+                background:rgba(0, 0, 0, 0.3);
+                position:absolute;
+                display:none;
+            }
+            #bbs{
+                width: 200px;
+                height: 200px;
+                float: left;
+                overflow: hidden;
+            }
+            #pic{
+                width: 810px;
+                height: 400px;
+                background:url(haizei.jpg);
+                background-size: 100%;
+                position:relative;
+            }
+            #pic img{
+                position:absolute;
+                display:none;
+                width: 810px;
+                height: 400px;
+            }
+            #pic img:nth-child(1){
+                display:block;
+            }
+        </style>
+    </head>
+    <body>
+    <div id="wrap">
+        <img src="haizei.jpg" alt="" />
+        <img src="katong.jpg"  alt="" />
+        <img src="aisi.jpg" alt="" />
+        <div id="main"></div>
+        </div>
+        <div id="btm">
+            <img src="haizei.jpg" alt="" />
+            <img src="katong.jpg"  alt="" />
+            <img src="aisi.jpg" alt="" />
+        </div>
+    
+    <div id="bbs">
+        <div id="pic">
+            <img src="haizei.jpg" alt="" />
+            <img src="katong.jpg"  alt="" />
+            <img src="aisi.jpg" alt="" />
+        </div>
+    </div>
+    </body>
+    <script type="text/javascript">
+        var main=document.getElementById('main');
+        var wrap=document.getElementById('wrap');
+        var bbs=document.getElementById('bbs');
+        var pic=document.getElementById('pic');
+        var pics = pic.getElementsByTagName('img');
+        var btm = document.getElementById('btm');
+        var btms = btm.getElementsByTagName('img');
+        var wraps = wrap.getElementsByTagName('img');
+
+            wrap.onmousemove=function(){
+                main.style.display = 'block';
+                main.style.left =event.clientX-main.offsetWidth/2+'px';
+                main.style.top = event.clientY-main.offsetHeight/2+'px';
+            }
+
+        main.onmousedown= function(event){
+            var event=event || window.event;
+            if(event.preventDefault){
+                event.preventDefault();
+            }else {
+                event.returnValue=false;
+            }
+            var stmX=event.clientX - main.offsetLeft;
+            var stmY =event.clientY - main.offsetTop;
+
+            
+            document.onmousemove = function(event){
+                var event=event || window.event;
+                var etmX = event.clientX - stmX;
+                var etmY = event.clientY - stmY;
+                var maxX = wrap.offsetWidth - main.offsetWidth;
+                var maxY = wrap.offsetHeight - main.offsetHeight;
+                var num=pic.offsetWidth/wrap.offsetWidth;
+
+                if(event.preventDefault){
+                    event.preventDefault();
+                }else {
+                    event.returnValue=false;
+                }
+
+                if (etmX<0) {
+                    etmX=0;
+                }
+                if(etmX>maxX){
+                    etmX=maxX;
+                }
+                if(etmY<0){
+                    etmY=0;
+                }
+                if(etmY>maxY){
+                    etmY=maxY;
+                }
+
+                main.style.left = etmX+'px';
+                main.style.top = etmY+'px';
+                bbs.scrollLeft=etmX*num;
+                bbs.scrollTop=etmY*num;
+            }
+
+                 document.onmouseup = function(){
+                document.onmousemove=null;
+
+            }
+
+        }
+
+        for(var i=0;i<btms.length;i++){
+            btms[i].index=i;
+            btms[i].onmouseover =function(){
+                for(var j=0;j<wraps.length;j++){
+                    wraps[j].style.display = 'none';
+                    pics[j].style.display = 'none';
+                   }
+                   wraps[this.index].style.display = 'block';
+                   pics[this.index].style.display = 'block'; 
+                   main.style.display = 'none';
+                }
+            }
+        
+        
+
+
+    </script>
+</html>
