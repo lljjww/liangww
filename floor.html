@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            #main{
+                position: relative;
+                margin:auto;
+            }
+            #main div{
+                width: 200px;
+                position: absolute;
+                background-color: blue;
+                box-shadow: 4px 2px 9px black;
+                border-radius: 6px;
+                font-size: 30px;
+                text-align: center;
+                color:white;
+                transition: 3s;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+        </div>
+    </body>
+    <script type="text/javascript">
+    window.onload = function(){
+        var Main = document.getElementById('main');
+        var divs = [];
+        var heights = [];
+
+        create(0,20);
+        function create(n1,n2){
+            for(var i=n1;i<n2;i++){
+                var oDiv = document.createElement('div');
+                Main.appendChild(oDiv);
+                oDiv.innerHTML = i;
+                oDiv.style.backgroundColor = color();
+                oDiv.style.height = fnRand(100,300)+'px';
+                divs[i] = oDiv;
+            }
+            arrange();
+        }
+        //排版
+        function arrange(){
+            var First = true;
+            var l = 0;
+            var t = 0;
+            var screenWidth = document.body.offsetWidth;
+            var Mainwidth = 0;
+
+            for(var i = 0;i<divs.length;i++){
+                //判断是否换行
+                if(l+divs[i].offsetWidth >= screenWidth){
+                    Mainwidth = l;
+                    l=0;
+                    First =false;
+                }
+                if(First){
+                    divs[i].style.left = l + 'px';
+                    divs[i].style.top  = t + 'px';
+                    //把div高度放进去数组里
+                    heights[i] = divs[i].offsetHeight;
+                }else{
+                    // 得出最矮值
+                    var tmpArray = [];
+                    for(var j=0;j<heights.length;j++){
+                        tmpArray.push(heights[j]);
+                        fnSort(tmpArray);
+                        var min = tmpArray[0];
+                    }
+                    for(var k=0;k<heights.length;k++){
+                        if(min==heights[k]){
+                            divs[i].style.left = k*(divs[i].offsetWidth+10)+'px';
+                            divs[i].style.top = min+10+'px';
+                            //更新高度
+                            heights[k] += divs[i].offsetHeight+10;
+                            break; 
+                        }
+                    }
+                }
+                // 注意是+=，增加l的
+                l += divs[i].offsetWidth+10;
+            }
+            Main.style.width = Mainwidth + 'px';
+        }
+
+        //随机数
+        function fnRand(m,n){
+            var r =Math.round(Math.random()*(n-m)+m);
+            return r;
+        }
+        
+        
+        //冒泡排列
+        function fnSort(array){
+            for(var i=0;i<array.length;i++){
+                //增加一个容器，在两个数交换位置的时候用来存值的
+                var tem = 0;
+                // 注意是array.length-i，有-i，对比的次数要随着后面的数减少，免得underfind
+                for(var j=0;j<array.length-i;j++){
+                    if(array[j]>array[j+1]){
+                        tem=array[j];
+                        array[j]=array[j+1];
+                        array[j+1]=tem;
+                    }
+                }
+            }
+        }
+        //用来清空函数的
+        //window.onresize就是窗口改变大小事件
+        window.onresize = function(){
+            // splice(a,b) a表示从数组第几位开始，b表示清除的个数
+            heights.splice(0,heights.length);
+            arrange();
+        }
+        //用来控制向下滚动的
+        //window.onscroll滚到的时候
+        window.onscroll = function(){
+            var scrollTop = document.body.scrollTop
+            var clientHeight = document.documentElement.clientHeight;
+            var tmpArr = [];
+            // 拿出heights里面的最大值
+            for(var i=0;i<heights.length;i++){
+                tmpArr.push(heights[i]);
+            }
+            fnSort(tmpArr);
+            var max = tmpArr[tmpArr.length-1];
+            // 当滚到最下面最长的div的时候就再通过create函数再生成div
+            // -300是用来生成得流畅点，不用有空白
+            if(scrollTop+clientHeight >= max-200){
+                var num = divs.length;
+                create(num,num+20);
+            }
+        }
+    }
+
+    function color(){
+        var Arr = [];
+        for(var i=0;i<3;i++){
+            var num = Math.round(Math.random()*255);
+            Arr.push(num);
+        }
+        var r = 'rgba'+'('+Arr[0]+','+Arr[1]+','+Arr[2]+','+0.5+')';
+        return r;
+    }
+    </script>
+</html>
