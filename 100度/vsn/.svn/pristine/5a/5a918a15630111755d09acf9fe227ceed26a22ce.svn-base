@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+     *{margin: 0;padding: 0;}
+     .warp{margin: 0 auto;
+     	 width: 602px;}
+     .fl{float: left;}
+     .fr{float: right;}
+     .clear{zoom:1;}
+     .clear:after{ overflow: hidden;
+     	          clear: both;
+     	           height: 0;
+     	           display: block;
+     	           content: ''}
+     .header .fl{width: 100px;height: 100px;
+     	     text-align: center;
+     	     line-height: 100px;
+     	     font-weight: bold;
+     	     border: 1px solid red; }
+     	    
+
+     .content-1-1{width: 352px;height: 120px;
+     	       border: 1px solid  black; 
+     	       text-align: center;}
+                
+
+     .content-1-2-8{width: 150px;height: 120px;
+     	           border: 1px solid  black; 
+     	           text-align: center;}
+                    
+     
+     .content-1-2-9{width: 200px;height: 120px;
+                    border: 1px solid  black;
+                    text-align: center; }
+               
+
+     .content-1-3{width: 352px;height: 60px;
+     	          border: 1px solid  black;
+     	          text-align: center;}
+     	      
+
+     .content-2-7{width: 154px;height: 140px;
+     	          border: 1px solid  black;
+                    text-align: center;}
+                
+
+     .content-2-10{width: 154px;height: 162px;
+     	           border: 1px solid  black;
+                   text-align: center;}
+
+     .footer-1{width: 508px;height: 30px;
+     	       border: 1px solid black;
+     	      
+     	       text-align: center;
+     	   }
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+<div class="warp">
+	<div class="header clear" >
+		<div class="fl">1</div>
+		<div class="fl">2</div>
+		<div class="fl">3</div>
+		<div class="fl">4</div>
+		<div class="fl">5</div>
+	</div>
+     <!-- HEARD结束 -->
+	<div class="content clear"  >
+		<div class="content-1 fl ">
+			<div class="content-1-1">6</div>
+			<div class="content-1-2 clear">
+				
+			   <div class="content-1-2-8 fl">8</div>
+			   <div class="content-1-2-9 fl">9</div>
+
+			</div>
+			<div class="content-1-3">11</div>
+		</div>
+
+		<div class="content-2 fl ">
+			<div class="content-2-7">7</div>
+			<div class="content-2-10">10</div>
+		</div>
+	</div>
+
+	<!-- content结束 -->
+    
+    <div class="footer">
+    	<div class="footer-1">12footer</div>
+    </div>
+	
+</div>
+</body>
+</html>
