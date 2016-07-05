@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+       body{
+       	transform-style: preserve-3d;
+        
+       	background: black;
+       }
+       .wrap{
+       	transform-style: preserve-3d;
+       	transform: rotateX(-10deg) rotateY(0deg);
+        width: 200px;
+        height: 300px;
+        position: relative;
+        top: 150px;
+        left:50%;
+        margin-left: -100px;
+        -webkit-animation:move10 10s 4.5s linear infinite both ;
+
+       } 
+       
+       .wrap:hover{
+       	-webkit-animation-play-state:paused;
+       } 
+
+       .wrap div{
+       	width: 200px;
+       	height: 300px;
+       	transform-style: preserve-3d;
+       	position: absolute;
+       	box-shadow: 0 0 23px white;
+       	-webkit-box-reflect:below 20px -webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.7) )
+       }
+       .wrap div img{
+       	-webkit-transition:1s;
+       }
+       .wrap div:hover img{
+       	-webkit-transform:scaleX(1.2) scaleY(1.2);
+       }
+       .wrap div:nth-child(1){
+       	-webkit-animation:move9 1s both; 
+       }
+        .wrap div:nth-child(2){
+       	-webkit-animation:move8 1s 0.5s both; 
+       }
+        .wrap div:nth-child(3){
+       	-webkit-animation:move7 1s 1s both; 
+       }
+        .wrap div:nth-child(4){
+       	-webkit-animation:move6 1s 1.5s both; 
+       }
+        .wrap div:nth-child(5){
+       	-webkit-animation:move5 1s 2s both; 
+       }
+        .wrap div:nth-child(6){
+       	-webkit-animation:move4 1s 2.5s both; 
+       }
+        .wrap div:nth-child(7){
+       	-webkit-animation:move3 1s 3s both; 
+       }
+        .wrap div:nth-child(8){
+       	-webkit-animation:move2 1s 3.5s both; 
+       }
+        .wrap div:nth-child(9){
+       	-webkit-animation:move1 1s 4s both; 
+       }
+       p{
+        width: 1000px;
+        height: 1000px;
+        background: -webkit-radial-gradient(rgba(133,129,129,0.1),rgba(0,0,0,0));
+        transform: rotateX(90deg) translate3d(-400px,0px,190px);
+        border-radius: 50%;
+        
+
+       }
+
+       @-webkit-keyframes move1{
+       	from{transform: rotateY(0deg) translateZ(0px)}
+        to{transform: rotateY(0deg) translateZ(450px);}
+       }
+       @-webkit-keyframes move2{
+       	from{transform: rotateY(0deg) translateZ(0px)}
+        
+        to{transform: rotateY(40deg) translateZ(450px)}
+       }
+        @-webkit-keyframes move3{
+       	from{transform: rotateY(0deg) translateZ(0px)}
+        
+        to{transform: rotateY(80deg) translateZ(450px)}
+       }
+         @-webkit-keyframes move4{
+       	from{transform: rotateY(0deg) translateZ(0px)}
+        
+        to{transform: rotateY(120deg) translateZ(450px)}
+       }
+         @-webkit-keyframes move5{
+       	from{transform: rotateY(0deg) translateZ(0px)}
+        
+        to{transform: rotateY(160deg) translateZ(450px)}
+       }
+         @-webkit-keyframes move6{
+       	from{transform: rotateY(0deg) translateZ(0px)}
+        
+        to{transform: rotateY(200deg) translateZ(450px)}
+       }
+         @-webkit-keyframes move7{
+       	from{transform: rotateY(0deg) translateZ(0px)}
+        
+        to{transform: rotateY(240deg) translateZ(450px)}
+       }
+         @-webkit-keyframes move8{
+       	from{transform: rotateY(0deg) translateZ(0px)}
+        
+        to{transform: rotateY(280deg) translateZ(450px)}
+       }
+         @-webkit-keyframes move9{
+       	from{transform: rotateY(0deg) translateZ(0px)}
+        
+        to{transform: rotateY(320deg) translateZ(450px)}
+       }
+       @-webkit-keyframes move10{
+       	from{transform: rotateX(-10deg) rotateY(0deg) ;}
+       	
+       	to{transform: rotateX(-10deg) rotateY(360deg) ;}
+       }
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div><img src="images/03.jpg" alt=""></div>
+		<div><img src="images/02.jpg" alt=""></div>
+		<div><img src="images/01.jpg" alt=""></div>
+		<div><img src="images/03.jpg" alt=""></div>
+		<div><img src="images/02.jpg" alt=""></div>
+		<div><img src="images/01.jpg" alt=""></div>
+		<div><img src="images/03.jpg" alt=""></div>
+		<div><img src="images/02.jpg" alt=""></div>
+		<div><img src="images/01.jpg" alt=""></div>
+    <p></p>
+	</div>
+  <div></div>
+</body>
+</html>
