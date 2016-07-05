@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="clear.css" />
+        <link rel="stylesheet" type="text/css" href="reset.css" />
+        <link rel="stylesheet" type="text/css" href="style2.css" />
+    </head>
+    <body>
+         <div id="wrap">
+            <div id="promain">
+                <div id="pro">
+                    <img src="img/progress.png" alt="" />
+                </div>
+            </div>
+            <div id="fen">0分</div>
+            <div id="main"></div>
+            <div id="begin">
+                开始游戏
+            </div>
+            <div id="hou">
+                结束了！<br/>
+                你的得分是
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+    var prom = document.getElementById('promain');
+    var wrap = document.getElementById('wrap');
+    var begin = document.getElementById('begin');
+    var main = document.getElementById('main');
+    var fen = document.getElementById('fen');
+    var hou = document.getElementById('hou');
+    var arr = [];
+    var text = 0;
+    var change =null;
+    begin.onclick = function(){
+        var time = setInterval(function(){
+        var index = 0;
+        var goon = false;
+        var flag = true;
+        var position = [{t:112,l:98},{t:159,l:19},{t:143,l:191},{t:219,l:16},{t:191,l:105},{t:209,l:198},{t:292,l:31},{t:274,l:117},{t:294,l:205}];
+        var pic = document.createElement('div');
+        pic.id = 'a';
+        var num2 = Math.random();
+        // if(num2>0.8){
+        //     pic.style.background = 'url(x.png)';
+        //     change = true;
+        // }else{
+        //     pic.style.background = 'url(h.png)';
+        //     change = false;
+        // }
+        var who = Math.random()>0.8?'x':'h';
+        pic.style.background = 'url('+who+'.png)';
+        var num = Math.round(Math.random()*8);
+        while(arr.indexOf(num)>-1){
+            num = Math.round(Math.random()*8);
+        };
+         arr.push(num);
+         if(arr.length>=5){
+            arr.shift();
+         }
+         pic.style.left = position[num].l+'px';
+         console.log(pic.style.left);
+         pic.style.top = position[num].t+'px';
+         main.appendChild(pic);
+         pic.onclick = function(){
+            index = 5;
+            goon =true;
+            ad();
+            pic.onclick = null;
+         }
+         function ad(){
+                if(who=='h'){
+                    text += 10;
+                }else{
+                    text -= 10;
+                }
+                fen.innerText = text;
+            }
+         var uptime = setInterval(function(){
+                if(flag||goon){
+                    index++;
+                }else{
+                    index--;
+                }
+                if(index>=5){
+                    flag=false;
+                }
+                if(index<0||index>9){
+                    clearInterval(uptime);
+                    main.removeChild(pic);
+                }
+                pic.style.backgroundPosition = -index*108+'px';
+            },100);
+    }, 500)
+    begin.style.display = 'none';
+    
+            function pro(){
+            var divs = main.getElementsByTagName('div'); 
+            prom.scrollLeft++;
+            if(prom.scrollLeft==prom.offsetWidth){
+                clearInterval(time);
+                clearInterval(timepro);
+                for (var i = 0; i < divs.length; i++) {
+                    divs[i].style.display = 'none';
+                };
+                hou.style.display = 'block';
+                var text1 = text;
+                var scroes = document.createTextNode(text1);
+                hou.appendChild(scroes);
+            }
+        }
+      var timepro = setInterval(pro,100);
+    }
+    </script>
+</html>

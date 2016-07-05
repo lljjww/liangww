@@ -1,0 +1,164 @@
+/* 
+* @Author: anchen
+* @Date:   2016-05-03 10:40:07
+* @Last Modified by:   anchen
+* @Last Modified time: 2016-05-08 12:27:02
+*/
+#wrap{
+    width: 320px;
+    height: 480px;
+    margin: auto;
+    background-image:url(img/game_bg.jpg);
+    position:relative;
+}
+#promain{
+    width: 180px;
+    height: 16px;
+    position: absolute;
+    top: 66px;
+    left: 63px;
+    overflow: hidden;
+}
+#pro{
+    width: 360px;
+    height: 16px;  
+}
+#fen{
+    width: 40px;
+    height: 20px;
+    position:absolute;
+    top: 13px;
+    left: 58px;
+    /*background-color: red;*/
+    color:white;
+    font-weight: bolder;
+    line-height: 20px;
+    font-size: 20px;
+}
+#pic1{
+    width: 108px;
+    height: 101px;
+    position:absolute;
+    top: 112px;
+    left: 98px;
+}
+#pic1 img{
+    position:absolute;
+    /*display: none;*/
+}
+#pic2 {
+    width: 108px;
+    height: 101px;
+    position:absolute;
+    top: 159px;
+    left: 19px;
+}
+#pic2 img{
+    position:absolute;
+    /*display: none;*/
+}
+#pic3 {
+    width: 108px;
+    height: 101px;
+    position:absolute;
+    top: 143px;
+    left: 191px;
+
+}
+#pic3 img{
+    position:absolute;
+    /*display: none;*/
+}
+#pic4 {
+    width: 108px;
+    height: 101px;
+    position:absolute;
+    top: 219px;
+    left: 16px;
+
+}
+#pic4 img{
+    position:absolute;
+    /*display: none;*/
+}
+#pic5 {
+    width: 108px;
+    height: 101px;
+    position:absolute;
+    top: 191px;
+    left: 105px;
+
+}
+#pic5 img{
+    position:absolute;
+    /*display: none;*/
+}
+#pic6 {
+    width: 108px;
+    height: 101px;
+    position:absolute;
+    top: 209px;
+    left: 198px;
+
+}
+#pic6 img{
+    position:absolute;
+    /*display: none;*/
+}
+#pic7 {
+    width: 108px;
+    height: 101px;
+    position:absolute;
+    top: 292px;
+    left: 31px;
+
+}
+#pic7 img{
+    position:absolute;
+    /*display: none;*/
+}
+#pic8 {
+    width: 108px;
+    height: 101px;
+    position:absolute;
+    top: 274px;
+    left: 117px;
+
+}
+#pic8 img{
+    position:absolute;
+    /*display: none;*/
+}
+#pic9 {
+    width: 108px;
+    height: 101px;
+    position:absolute;
+    top: 294px;
+    left: 205px;
+
+}
+#pic9 img{
+    position:absolute;
+    /*display: none;*/
+}
+#pic>div{
+    display:none;
+    overflow:hidden;
+}
+.end{
+    width: 205px;
+    height: 190px;
+    position: absolute;
+    top: 80px;
+    left: 70px;
+    text-align: center;
+    /*line-height: 300px;*/
+    color:white;
+    font-size: 27px;
+    font-weight: bolder;
+    padding-top: 110px;
+}
+#endfen{
+    font-size: 40px;
+    color:red;
+}

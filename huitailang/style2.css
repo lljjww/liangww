@@ -1,0 +1,78 @@
+/* 
+* @Author: anchen
+* @Date:   2016-05-08 15:12:59
+* @Last Modified by:   anchen
+* @Last Modified time: 2016-05-09 11:50:33
+*/
+/* 
+* @Author: anchen
+* @Date:   2016-05-03 10:40:07
+* @Last Modified by:   anchen
+* @Last Modified time: 2016-05-08 12:27:02
+*/
+#wrap{
+    width: 320px;
+    height: 480px;
+    margin: auto;
+    background-image:url(img/game_bg.jpg);
+    position:relative;
+}
+#promain{
+    width: 180px;
+    height: 16px;
+    position: absolute;
+    top: 66px;
+    left: 63px;
+    overflow: hidden;
+}
+#pro{
+    width: 360px;
+    height: 16px;  
+}
+#fen{
+    width: 40px;
+    height: 20px;
+    position:absolute;
+    top: 13px;
+    left: 58px;
+    /*background-color: red;*/
+    color:white;
+    font-weight: bolder;
+    line-height: 20px;
+    font-size: 20px;
+}
+#a{
+     position: absolute;
+     width: 108px;
+     height: 101px;
+ }
+     
+#hou,#begin{
+    width: 320px;
+    height: 100px;
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    color:red;
+    text-shadow: 1px 1px yellow;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    /*display: none;*/
+}
+#begin{
+    cursor: pointer;
+    height: 35px;
+}
+#hou{
+    display:none;
+}
+
+#endfen{
+    font-size: 40px;
+    color:red;
+}
+#main{
+    width: 290px;
+    height: 260px;
+}
