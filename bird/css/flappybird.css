@@ -1,0 +1,123 @@
+/* 
+* @Author: Bill
+* @Date:   2016-05-24 10:27:49
+* @Last Modified by:   anchen
+* @Last Modified time: 2016-05-25 11:15:16
+*/
+
+#wrap{
+    width: 343px;
+    height: 480px;
+    background-image: url(../img/bg.jpg);
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+#score{
+    height: 39px;
+    position: absolute;
+    left: 160px;
+    top: 80px;
+}
+#head{
+    position: absolute;
+    top:150px;
+    left: 50px;
+}
+#head img{
+    vertical-align: middle;
+}
+#start{
+    cursor: pointer;
+    width: 85px;
+    height: 29px;
+    position: absolute;
+    left: 130px;
+    top: 260px;
+    background:url(../img/start.jpg) no-repeat; 
+    border: none;
+}
+#line{
+    width: 686px;
+    height: 21px;
+    background:url(../img/banner1.jpg);
+    position:absolute;
+    top:423px;
+}
+/*优化碰撞检测*/
+#bird{
+    width: 34px;
+    height: 26px;
+    background-position: -5px -12px;
+    position: absolute;
+    left: 100px;
+    top: 150px;
+}
+/*管子的共有样式*/
+.pipe{
+    width: 62px;
+    position: absolute;
+    left: 343px;
+}
+.upPipe{
+    height: 120px;
+    top: 0;
+    background-image:url('../img/up_mod.png');
+}
+.upPipe img{
+    position: absolute;
+    bottom:0;
+}
+.downPipe{
+    height: 120px;
+    bottom: 57px;/*480-423*/
+    background-image:url(../img/down_mod.png);
+}
+#gameover{
+    position: absolute;
+    top:150px;
+    /*left: 60px;*/
+    z-index: 99;
+    width: 343px;
+    text-align: center;
+    display: none;
+}
+#gameover #msg{
+    width: 269px;
+    height: 135px;
+    background:url(../img/message.jpg);
+    margin:0 auto;
+}
+#endScore,#best{
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+#gameover #endScore{
+    left:260px;
+    top: 80px;
+}
+#gameover #best{
+    left:260px;
+    top: 130px;
+}
+#gameover #ok{
+    width: 96px;
+    height: 33px;
+    border:0px;
+    background-image: url(../img/ok.jpg);
+    margin-top: 10px;
+}
+/*//动画*/
+@-webkit-keyframes fly{
+    0%{transform: translateY(0px);}
+    25%{transform: translateY(30px);}
+    50%{transform: translateY(0px);}
+    75%{transform: translateY(-30px);}
+    100%{transform: translateY(0px);}
+}
+.headAni{
+    -webkit-animation: fly 2.0s linear infinite;
+    
+}

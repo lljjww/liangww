@@ -1,0 +1,122 @@
+#wrap{
+	width: 343px;
+	height: 480px;
+	background-image: url('../img/bg.jpg');
+	margin:0px auto;
+	overflow: hidden;
+	position: relative;
+}
+
+#score{
+	height: 39px;
+	position: absolute;
+	left:160px;
+	top:80px;
+}
+
+#head{
+	position: absolute;
+	top:150px;
+	left: 50px;
+}
+
+/*行框*/
+#head img{
+	vertical-align: middle;
+}
+
+#start{
+	cursor: pointer;
+	width: 85px;
+	height: 29px;
+	background: url('../img/start.jpg');
+	position: absolute;
+	border: 0px;
+	left:130px;
+	top:300px;
+}
+
+#line{
+	width: 686px;
+	height: 21px;
+	background: url('../img/banner.jpg');
+	position: absolute;
+	top:423px;
+}
+
+/*优化了碰撞检测*/
+#bird{
+	width: 34px;
+	height: 26px;
+	/*border:1px red solid;*/
+	background-position:-6px -12px; 
+	position: absolute;
+	left:100px;
+	top:150px;
+}
+
+/*管子的共有样式*/
+.pipe {
+	width: 62px;
+	position: absolute;
+	left:343px;
+	height: 120px;
+}
+
+/*上面管子的样式*/
+.upPipe{
+	top:0px;
+	background-image: url('../img/up_mod.png');
+}
+.upPipe img{
+	position: absolute;
+	bottom: 0;
+}
+/*下面管子的样式*/
+.downPipe{
+	/*height: 60px;*/
+	bottom: 0px;
+	background-image: url('../img/down_mod.png');
+}
+
+/*gameover*/
+#gameover{
+	position: absolute;
+	top:150px;
+	z-index: 999;
+	width: 343px;
+	text-align: center;
+}
+
+
+#gameover #msg{
+	width: 269px;
+	height: 135px;
+	background: url('../img/message.jpg');
+	margin:0px auto;
+}
+
+#endScore,#best{
+	position: absolute;
+	font-size: 30px;
+	color: white;
+	left:246px;
+	font-weight: bold;
+}
+
+#endScore{
+	top:75px;
+}
+
+#best{
+	top:125px;
+}
+
+#ok{
+	cursor: pointer;
+	width: 96px;
+	height: 33px;
+	background: url('../img/ok.jpg');
+	margin-top: 10px;
+	border:0;
+}
