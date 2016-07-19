@@ -1,0 +1,382 @@
+*{
+	font-family: '微软雅黑';
+}
+#wrap{
+	width: 8.02rem;
+	height: 39.36rem;
+	/*background: #ccc;*/
+	margin: auto;
+	position: relative;
+}
+#logo{
+	width: 7.5rem;
+	position: absolute;
+	top: 0;
+	left: .52rem;
+}
+#logo img{
+	width: 100%;
+}
+#header{
+	position:absolute;
+	left: .51rem;
+	top: .37rem;
+	width: 7.51rem;
+}
+#header img{
+	width: 100%;
+}
+#con{
+	width: 8.15rem;
+	height: 30.55rem;
+	background: url(../img/bg.png);
+	background-size: 100%;
+	position: absolute;
+	left: .2rem;
+	top: 4.34rem;
+	padding-top: 2rem;
+	/*text-align: center;*/
+}
+#con_0{
+	width: 6.56rem;
+	height: 1.51rem;
+	margin: auto;
+	background: url(../img/con_0.png);
+	background-size: 100%;
+	text-align: center;
+	margin-bottom: .4rem;
+	/*padding-top: .13rem;*/
+}
+#con_0_top{
+	/*margin: auto;*/
+	font-size: .5rem;
+	color: white;
+	font-family: '微软雅黑';
+	/*font-weight: bold;*/
+	letter-spacing:.12rem;
+}
+#con_0_top span{
+	color: yellow;
+}
+#con_0_bottom{
+	font-size: .28rem;
+	color: white;
+	font-family: '微软雅黑';
+	margin-top: .15rem;
+	/*font-weight: bold;*/
+}
+#con_1{
+	width: 6.48rem;
+	margin: auto;
+	margin-bottom: .4rem;
+}
+#con_1_top{
+	width: .65rem;
+	text-align: center;
+}
+#con_1_top img{
+	width: 100%;
+}
+#con_1_top span{
+	font-size: .4rem;
+	color: white;
+	font-family: '微软雅黑';
+	/*display: block;*/
+	font-weight: bold;
+	/*margin-bottom: .03rem;*/
+}
+
+#con_1_bottom{
+	width: 6.3rem;
+	height: .88rem;
+	background: url(../img/con_1_bg.png);
+	background-size: 100%;
+	font-size: .26rem;
+	color: white;
+	font-family: '微软雅黑';
+	padding-left: .18rem;
+	line-height: .71rem;
+	letter-spacing:.03rem;
+	font-weight: bold;
+}
+#con_1_bottom span{
+	font-size: .41rem;
+}
+#con_2{
+	width: 6.48rem;
+	margin: auto;
+	margin-bottom: .4rem;
+}
+#con_2_top{
+	width: .65rem;
+	text-align: center;
+}
+#con_2_top img{
+	width: 100%;
+}
+#con_2_top span{
+	font-size: .4rem;
+	color: white;
+	font-family: '微软雅黑';
+	/*display: block;*/
+	font-weight: bold;
+	/*margin-bottom: .03rem;*/
+}
+
+#con_2_bottom{
+	width: 5.84rem;
+	height: .73rem;
+	background: url(../img/con_2_bg.png);
+	background-size: 100%;
+	font-size: .3rem;
+	color: white;
+	font-family: '微软雅黑';
+	padding-left: .36rem;
+	line-height: .73rem;
+	letter-spacing:.08rem;
+	font-weight: bold;
+}
+#con_2_bottom span{
+	font-size: .4rem;
+	color:#80ff03;
+}
+#con_3{
+	width: 6.48rem;
+	margin: auto;
+	margin-bottom: .4rem;
+}
+#con_3_top{
+	width: .65rem;
+	text-align: center;
+}
+#con_3_top img{
+	width: 100%;
+}
+#con_3_top span{
+	font-size: .4rem;
+	color: white;
+	font-family: '微软雅黑';
+	/*display: block;*/
+	font-weight: bold;
+	/*margin-bottom: .03rem;*/
+}
+
+#con_3_bottom{
+	width: 5.84rem;
+	height: .73rem;
+	background: url(../img/con_3_bg.png);
+	background-size: 100%;
+	font-size: .3rem;
+	color: white;
+	font-family: '微软雅黑';
+	padding-left: .36rem;
+	line-height: .73rem;
+	letter-spacing:.08rem;
+	font-weight: bold;
+}
+#btn{
+	width: 2.20rem;
+	height: .6rem;
+	background:url(../img/btn.png);
+	background-size: 100%;
+	margin: auto;
+	margin-bottom: .43rem;
+}
+#certificate{
+	width: 5.30rem;
+	height: 2.18rem;
+	background: url(../img/certificate.png);
+	background-size: 100%;
+	margin: auto;
+	text-align: center;
+	font-size: .32rem;
+	color: white;
+	font-family: '微软雅黑';
+	padding-top: 1.18rem;
+	margin-bottom: .7rem;
+	margin-bottom: 1.05rem;
+}
+#three{
+	margin-bottom: 1.07rem;
+}
+#three_top{
+	margin-left: 1.10rem;
+	letter-spacing: .10rem;
+	margin-bottom: .3rem;
+}
+#three_top div:nth-child(1){
+	font-size: .4rem;
+	color: white;
+	padding-top: .28rem;
+}
+#three_top div:nth-child(2){
+	
+	color: #ff0101;
+	width: 1.04rem;
+	height: 1.04rem;
+	/*line-height: 1.04rem;*/
+	/*text-align: center;*/
+	background: url(../img/time.png);
+	background-size: 100%;
+	/*margin: 0 .1rem;*/
+	font-weight: bold;
+}
+#three_top div:nth-child(2) span{
+	font-size: .48rem;
+	display: block;
+	width: .48rem;
+	height: .48rem;
+	margin-left: .36rem;
+	margin-top: .18rem;
+}
+#three_top div:nth-child(3){
+	font-size: .30rem;
+	color: white;
+	padding-top: .50rem;
+}
+#three_bottom{
+	font-size: .45rem;
+	color:white;
+	padding-left: 2.8rem;
+	letter-spacing: .1rem;
+	font-weight: bold;
+}
+#three_bottom i{
+	font-size: .6rem; 
+	margin-right: .1rem;
+}
+#follow{
+	width: 6.30rem;
+	height: 1.12rem;
+	background: url(../img/follow.png);
+	background-size: 100%;
+	margin: auto;
+	padding-top: .30rem;
+	font-size: .34rem;
+	color:white;
+	font-style: italic;
+	letter-spacing: .04rem;
+	font-weight: bold;
+	margin-bottom: 1.2rem;
+}
+#follow_top{
+	text-indent: 1em;
+}
+#follow_bottom{
+	text-indent: 3em;
+}
+#follow_bottom span{
+	font-size: .4rem;
+	vertical-align: bottom;
+}
+
+#quanzhen{
+	width: 6.5rem;
+	height: 2.12rem;
+	/*padding-left: .rem;*/
+	margin: auto;
+	margin-bottom: .8rem;
+}
+#quanzhen img{
+	width: 2.12rem;
+	margin-right: .62rem;
+}
+#quanzhen_right{
+	padding-top: .6rem;
+	display: inline-block;
+}
+#quanzhen_right_top{
+	font-size: .38rem;
+	color: white;
+	font-weight: bold;
+	margin-bottom: .13rem;
+	letter-spacing: .04rem;
+}
+#quanzhen_right span{
+	font-size: .44rem;
+	font-weight: bold;
+	color: white;
+	letter-spacing: .06rem;
+}
+#teacher{
+	margin: auto;
+	width: 6.44rem;
+	height: 2.12rem;
+	padding-left: .34rem;
+	margin-bottom: .8rem;
+}
+#teacher_left{
+	padding-top: .58rem;
+	color: white;
+	display: inline-block;
+	margin-right: .44rem;
+	letter-spacing: .07rem;
+}
+#teacher img{
+	width: 2.12rem;
+}
+#teacher_left div:nth-child(1){
+	font-size: .36rem;
+	margin-bottom: .15rem;
+	font-weight: bold;
+}
+#teacher_left div:nth-child(2){
+	font-size: .42rem;
+	font-weight: bold;
+}
+
+#xieyi{
+	width: 6.5rem;
+	height: 2.12rem;
+	/*padding-left: .rem;*/
+	margin: auto;
+	margin-bottom: .8rem;
+}
+#xieyi img{
+	width: 2.12rem;
+	margin-right: .62rem;
+}
+#xieyi_right{
+	padding-top: .6rem;
+	display: inline-block;
+}
+#xieyi_right_top{
+	font-size: .38rem;
+	color: white;
+	font-weight: bold;
+	margin-bottom: .13rem;
+	letter-spacing: .04rem;
+}
+#xieyi_right span{
+	font-size: .44rem;
+	font-weight: bold;
+	color: white;
+	letter-spacing: .06rem;
+}
+
+#btn2{
+	width: 2.2rem;
+	height: .6rem;
+	background: url(../img/btn.png);
+	background-size: 100%;
+	margin: auto;
+}
+
+#foot{
+	width: 7.76rem;
+	height: 2.59rem;
+	background: url(../img/foot.jpg);
+	background-size: 100%;
+	position: absolute;
+	bottom: 0rem;
+	left: .44rem;
+	background-size: 100%;
+	padding-top: 1.65rem;
+}
+#erweima{
+	width: 1.93rem;
+	height: 2.07rem;
+	margin: auto;
+	background: url(../img/QR_code.png) no-repeat;
+	background-size: 100%;
+}

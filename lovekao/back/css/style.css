@@ -1,0 +1,338 @@
+*{
+	font-family: '微软雅黑';
+}
+#wrap{
+	width: 7.5rem;
+	margin: auto;
+	background:url(../img/bg.png);
+	background-size: 100%;
+	position: relative;
+	padding-bottom: 3.47rem;
+}
+#logo img{
+	width: 7.5rem;
+}
+#banner{
+	width: 5.22rem;
+	height: 3.46rem;
+	background: url(../img/banner.png);
+	background-size: 100%;
+	margin: auto;
+	padding-left: 1.67rem;
+	padding-top: .3rem;
+	margin-bottom: .34rem;
+}
+#banner div:nth-child(1){
+	font-size: .38rem;
+	color: #7d05d9;
+	font-weight: bold;
+	font-family: '微软雅黑';
+}
+#banner div:nth-child(1) span{
+	font-size: .57rem;
+}
+#banner div:nth-child(2){
+	font-size: .38rem;
+	color: #7d05d9;
+	font-weight: bold;
+	font-family: '微软雅黑';
+	margin-bottom: .25rem;
+}
+#banner_btn{
+	width: 1.63rem;
+	height: .6rem;
+	background: url(../img/banner_btn.png);
+	background-size: 100%;
+	margin-left: .85rem;
+	margin-bottom: .35rem;
+}
+#banner_bottom{
+	margin-left: .25rem;
+}
+#banner_bottom span{
+	color: #1cdd6d;
+	margin-right: .23rem;
+	font-size: .23rem;
+	font-weight: bold;
+	letter-spacing: -.02rem;
+}
+
+#ready{
+	width: 5.24rem;
+	height: .5rem;
+	background: url(../img/kunhuo.png);
+	background-size: 100%;
+	margin: auto;
+	text-align: center;
+	line-height: .5rem;
+	color:white;
+	font-size: .32rem;
+	font-weight: bold;
+	margin-bottom: .85rem;
+}
+
+#kunhuo{
+	margin-left: .4rem;
+	margin-bottom: .9rem;
+}
+#kunhuo img{
+	width: 3.43rem;
+	margin-right: .68rem;
+}
+#kunhuo_font{
+	display: inline-block;
+}
+#kunhuo_font div:nth-child(2n+1){
+	font-size: .28rem;
+	color: #333333;
+	margin-bottom: .23rem;
+	font-weight: bold;	
+}
+#kunhuo_font div:nth-child(2n){
+	font-size: .2rem;
+	color: white;
+	margin-bottom: .34rem;
+	font-weight: bold;
+}
+#buru{
+	width: 4.73rem;
+	margin: auto;
+	text-align: center;
+	margin-bottom: .1rem;
+}
+#buru div:nth-child(1){
+	font-size: .2rem;
+	color:white;
+	margin-bottom: .2rem;
+	font-weight: bold;	
+	font-family: '微软雅黑';
+}
+#buru div:nth-child(2){
+	font-size: .2rem;
+	color:#333333;
+	font-weight: bold;	
+	font-family: '微软雅黑';
+	/*margin-bottom: .1rem;*/
+}
+#dingji{
+	width: 4.71rem;
+	height: .62rem;
+	background: url(../img/lb_rb.png) no-repeat;
+	background-size: 100%;
+	margin: auto;
+	text-align: center;
+	padding-top: .05rem;
+	font-size: .3rem;
+	color:#fae605;
+	font-weight: bold;
+	text-shadow: 0 .04rem 0 #86bb9e;
+	margin-bottom: .08rem;
+}
+#btn{
+	width: 1.47rem;
+	height: .4rem;
+	background: url(../img/char.png);
+	background-size: 100%;
+	margin: auto;
+	margin-bottom: .08rem;
+}
+#num{
+	width: 1.78rem;
+	font-size: .25rem;
+	color: #ff890a;
+	font-weight: bold;
+	margin: auto;
+	text-shadow: 0 .04rem 0 #86bb9e;
+}
+
+#advance{
+	width: 7.7rem;
+	/*height: 23rem;*/
+	margin-left: -.2rem;
+	background: url(../img/con_bg.png) no-repeat;
+	background-size: 100%;
+	padding-top: .53rem;
+}
+#advance_top{
+	width: 3.18rem;
+	height: 1.07rem;
+	background: url(../img/advance_top.png) no-repeat;
+	background-size: 100%;
+	margin-left: 2.5rem;
+	margin-bottom: .9rem;	
+}
+#advance_one{
+	margin-left: 4rem;
+	margin-bottom: 2.1rem;
+}
+#advance_one div:nth-child(1){
+	margin-left: .8rem;
+	margin-bottom: .4rem;	
+}
+#advance_one div:nth-child(1) span{
+	font-size: .4rem;
+	color:#fb5123;
+	text-shadow: 0 .04rem 0 #86bb9e;
+	vertical-align: bottom;
+}
+#advance_one img{
+	width: .68rem;
+	margin-right: .43rem;
+}
+#advance_one div:nth-child(2){
+	padding-right: .1rem;
+}
+#advance_one div:nth-child(2) span{
+	font-size: .27rem;
+	color:white;
+	display: block;
+	letter-spacing: .02rem;
+	text-align: right;
+}
+#advance_one_one{
+	text-indent: 2em;
+}
+#advance_one_three{
+	text-indent: 5em;
+}
+
+#advance_two{
+	margin-left: .45rem;
+	margin-bottom: 1.36rem;
+}
+#advance_two div:nth-child(1){
+	margin-bottom: .32rem;
+}
+#advance_two div:nth-child(1) img{
+	width: .85rem;
+}
+#advance_two div:nth-child(1) span{
+	font-size: .4rem;
+	font-weight: bold;
+	color: #f4cf21;
+	text-shadow: 0 .04rem .02rem black;
+	margin-right: .37rem;
+	vertical-align: bottom;
+}
+#advance_two_left{
+	font-size: .3rem;
+	color: white;
+	margin-right: .3rem;
+	padding-top: .1rem;
+	display: inline-block;
+}
+#advance_two div:nth-child(2) img{
+	width: 1.93rem;
+}
+#advance_three{
+	margin-left: 3.2rem;
+	margin-bottom: .74rem;
+}
+#advance_three div:nth-child(1){
+	margin-left: 1.77rem;
+	margin-bottom: .05rem;
+}
+#advance_three div:nth-child(1) img{
+	width: .76rem;
+	margin-right: .2rem;
+}
+#advance_three div:nth-child(1) span{
+	font-size: .4rem;
+	color: #fb5123;
+	text-shadow: 0 .04rem 0.04rem #111213;
+	display: inline-block;
+	padding-top: .56rem;
+}
+/*#advance_three div:nth-child(2){
+	display: inline-block;
+}*/
+#advance_three div:nth-child(2) img{
+	width: 1.22rem;
+	margin-right: .3rem;
+}
+#advance_three_font{
+	padding-top: .3rem;
+	font-size: .32rem;
+	color: white;
+	display: inline-block;
+}
+#advance_four{
+	margin-left: .5rem;
+	margin-bottom: 1.78rem;
+}
+#advance_four div:nth-child(1){
+	/*margin-bottom: .52rem;*/
+}
+#advance_four div:nth-child(1) img{
+	width: .8rem;
+	margin-right: .21rem;
+}
+#advance_four div:nth-child(1) span{
+	display: inline-block;
+	font-size: .4rem;
+	color: #f4cf21;
+	padding-top: .65rem;
+	text-shadow: 0 .04rem 0.05rem #111213;
+}
+#advance_four div:nth-child(2){
+	margin-left: .08rem;
+}
+#advance_four div:nth-child(2) span{
+	font-size: .3rem;
+	color: white;
+	display: inline-block;
+	width: 2.8rem;
+	padding-top: .52rem;
+	margin-right: .35rem;
+}
+#advance_four div:nth-child(2) img{
+	width: 2.04rem;
+}
+#advance_five{
+	margin-left: 1.6rem;
+}
+#advance_five>div{
+	float: left;
+}
+#advance_five_left{
+	margin-top: 1.2rem;
+	margin-right: 1.05rem;
+}
+#advance_five_left div:nth-child(1){
+	width: 1.47rem;
+	height: .4rem;
+	background: url(../img/char.png);
+	background-size: 100%;
+	margin-left: .07rem;
+	margin-bottom: .3rem;
+}
+#advance_five_left div:nth-child(2){
+	font-size: .23rem;
+	color:#ff890a;
+	text-shadow: 0 .04rem 0.05rem #111213;
+}
+#advance_five_right div:nth-child(1) img{
+	width: .81rem;
+	margin-right: .43rem;
+	margin-bottom: .2rem;
+}
+#advance_five_right div:nth-child(1) span{
+	font-size: .43rem;
+	color: #fb5123;
+	text-shadow: 0 .04rem 0.05rem #111213;
+	display: inline-block;
+	padding-top: .65rem;
+}
+#advance_five_right div:nth-child(2) span{
+	font-size: .3rem;
+	color: white;
+}
+#erweima{
+	width: 4.52rem;
+	height: 3.45rem;
+	position: absolute;
+	bottom: -1.05rem;
+	left: 1rem;
+	background: url(../img/erweima.png);
+	background-size: 100%;
+}
