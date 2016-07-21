@@ -1,0 +1,61 @@
+#mask_con{
+	width: 3rem;
+    height: 3rem;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -1.5rem;
+    margin-top: -1.5rem;
+    border:.01rem solid white;
+}
+#mask{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+}
+#mask div{
+    position: absolute;
+	font-size: .4rem;
+    color:white;
+}
+
+#mask div:nth-child(1){
+    left: 2.4rem;
+    top: 6.3rem;
+}
+#mask div:nth-child(2){
+    left: 2.8rem;
+    top: 6.3rem;
+}
+#mask div:nth-child(3){
+    left: 3.2rem;
+    top: 6.3rem;
+}
+#mask div:nth-child(4){
+    left: 3.6rem;
+    top: 6.3rem;
+}
+#mask div:nth-child(5){
+    left: 4rem;
+    top: 6.3rem;
+}
+#mask div:nth-child(6){
+    left: 4.4rem;
+    top: 6.3rem;
+}
+#mask div:nth-child(7){
+    left: 4.8rem;
+    top: 6.3rem;
+}
+#button{
+	width: 1rem;
+	height: 0.5rem;
+	position: absolute;
+	bottom: 4rem;
+	left: 3.2rem;
+}
